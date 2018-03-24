@@ -1,0 +1,110 @@
+/*chat room styling*/
+	
+/*html elements*/
+	html {
+		min-height: 100vh;
+	}
+
+	body {
+		min-height: 100vh;
+		font-size: 15px;
+	}
+
+/*chat container*/
+	.chatWrapper {
+		height: 100vh;
+		display: grid;
+		grid-template-rows: 1fr 5fr 20vh;
+		grid-template-columns: 20% 80%;
+		grid-template-areas:
+		"header header"
+		"sidebar chatarea"
+		"sidebar userarea";
+	}
+
+/*chat elements*/
+
+	.chatElement {
+		padding: 1em;
+		overflow: auto;
+	}
+
+	#header {
+		grid-area: header;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		text-align: right;
+	}
+
+	#header a {
+		font-size: 1em;
+	}
+
+	#sideBar {
+		grid-area: sidebar;
+	}
+
+	#chatArea {
+		grid-area: chatarea;
+		overflow: auto;
+		display: flex;
+		flex-direction: column-reverse;
+	}
+
+	.chatMessage {
+		margin-top: 1%;
+		line-height: 1.25em;
+		display: flex;
+	}
+
+	.chatMessage img {
+		margin: 0 1em;
+		height: 50px;
+		width: 50px;
+	}
+
+/*user area elements*/
+
+	#userArea {
+		grid-area: userarea;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+
+	#chatInput {
+		text-align: right;
+		line-height: 2em;
+	}
+
+	#userInfo {
+		text-align: center;
+	}
+
+	#userInfo img {
+		height: 50px;
+		width: 50px;
+	}
+
+	#logout {
+		cursor: pointer;
+	}
+
+/*font styles*/
+
+	h1 {
+		font-size: 3em;
+	}
+
+	h2 {
+		font-size: 2em;
+	}
+
+	h3 {
+		font-size: 1.5em;
+	}
+
+	h6 {
+		font-size: 0.75em;
+	}

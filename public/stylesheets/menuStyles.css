@@ -1,0 +1,81 @@
+@font-face {
+  font-family: "decade";
+  src: url(../fonts/decade.ttf);
+}
+
+body {
+	background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../img/menuBackground.jpg);
+	background-size: cover;
+	font-family: "decade","Open Sans", sans-serif;
+	color: #e9d66b;
+}
+
+form {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	text-align: center;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: column;
+	margin: 5% 0;
+}
+
+input {
+	margin: .5em;
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+	border: 0px solid #e9d66b;
+	border-radius: 1.125em;
+	font-size: 2em;
+	padding: 0.25em 0.5em;
+	background-color: rgba(255,255,255,0.5);
+}
+
+#radioList {
+	display: flex;
+	margin-bottom: 0.5em;
+}
+
+input[type="color"] {
+	height: 5em;
+	width: 10em;
+	border: none;
+	background-color: #000;
+}
+
+button {
+	font-family: "decade","Open Sans", sans-serif;
+	width: 50%;
+	height: 3em;
+	background: rgba(0,0,0,0);
+	border: solid 2px #e9d66b;
+	border-radius: 1.5em;
+	color: #e9d66b;
+	font-size: 1.5em;
+}
+
+button:hover {
+	background: rgba(0,0,0,0.3);
+}
+
+select {
+	width: 50%;
+}
+
+h1 {
+	margin-top: 5%;
+	text-align: center;
+	font-size: 5em;
+}
+
+h2 {
+	font-size: 2em;
+	text-align: center;
+}
+
+a:visited {
+	color: #e9d66b;
+}

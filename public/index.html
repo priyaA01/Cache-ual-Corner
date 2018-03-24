@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Cache-ual Corner</title>
+		<link rel="shortcut icon" type="image/png" href="/assets/img/favicon.png"/>
+
+		<link rel="stylesheet" href="/stylesheets/reset.css" type="text/css" />
+		<link rel="stylesheet" href="/stylesheets/style.css" type="text/css" />
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="/js/skin.js"></script>
+	</head>
+
+	<body>
+		<div class="chatWrapper">
+			<div class="chatElement" id="header">
+
+				<h1>Cache-ual Corner</h1>
+
+			</div>
+
+			<div class="chatElement" id="sideBar">
+
+				<h2>Users</h2>
+
+				<div id="userList">
+					<ul></ul>
+				</div>
+
+			</div>
+
+			<div class="chatElement" id="chatArea">
+				
+				<div id="chatMessages"></div>
+
+			</div>
+
+			<div class="chatElement" id="userArea">
+				<form id="chatInput">
+					<input id="m" autocomplete="off" type="text" size="100" maxlength="600" />
+				     <button type="submit" id="btnSend">Send</button>
+				 </form>
+			
+				<div id="userInfo">
+					<img id="userAvatar" />
+
+					<h3 id="userName"></h3>
+
+					<div id="settingsModal">
+						<h6><a href="/update">Settings / Skins</a></h6>
+						<h6 id="logout">Logout</h6>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<footer>
+			<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+			<script src="/js/chat.js"></script>
+		</footer>
+	</body>
+
+</html>
