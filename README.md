@@ -8,7 +8,8 @@ The idea became reality when a group of people sparked interest into revamping r
 
 CACHE-ual CORNER was created to showcase the use of Node, Express, MySQL, Model View Controller design pattern, Sequelize,  HTML, CSS, jQuery, JavaScript, sockets, user validation, and deployment via Heroku.
 
-**PREREQUISITES**:
+## PREREQUISITES
+
 - Google Chrome Internet Browser
 - JavaScript enabled on Google Chrome
 - Access to Google Font packages
@@ -16,5 +17,14 @@ CACHE-ual CORNER was created to showcase the use of Node, Express, MySQL, Model 
 - Heroku
 - JawsDB
 - Perfered viewing in English language :us:
+
+### HOW THE SITE WORKS
+
+New Members | Members
+------------ | -------------
+**Sign up:** Direct to the signup page to create an account |  **Sign up:** Not needed. Account is in the system
+**Members Page:** User can start the chat or update their settings | **Members Page:** User can start the chat or update their settings
+**Settings:** User can update username, avatar, and / or font color  | **Settings::** User can update username, avatar, and / or font color
+**Logout** User can end session by clicking the logout button | **Logout** User can end session by clicking the logout button
 
 
