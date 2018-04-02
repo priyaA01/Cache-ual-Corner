@@ -16,7 +16,7 @@ $("form.update").on("submit", function(event)
 	}
 
 	if (updateData.userName === "") {
-		updateData.userName = "I forgot to choose a name";
+		updateData.userName = "guest123";
 	}
 
 	updateUserInfo(updateData)
@@ -30,7 +30,7 @@ function updateUserInfo(data) {
 		url : "/api/update/",
 		data : data
 	}).then(
-		window.location.replace("/")
+		window.location.replace("/chat")
 	);
 };
 

@@ -7,11 +7,11 @@ var isAuthenticated = require("../config/middleware/isAuthenticated");
 module.exports = function(app) 
 {
   app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/index.html"));
+    res.sendFile(path.join(__dirname, "../public/html/index.html"));
   });
   //login route
   app.get("/login", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/html/login.html"));
+    res.sendFile(path.join(__dirname, "../public/html/index.html"));
   });
   //sign up route
   app.get("/signup", function(req, res) {
@@ -23,19 +23,14 @@ module.exports = function(app)
   })
 
   //chat routes
-
-   app.get("/api/new", function (req, res) {
-    res.sendFile(path.join(__dirname, "../public/index.html"));
-  });
-
-  app.get("/api/newChat", function (req, res) {
-    res.sendFile(path.join(__dirname, "../public/index.html"));
+   app.get("/chat", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/html/chat.html"));
   });
 
   // Here we've add our isAuthenticated middleware to this route.
   // If a user who is not logged in tries to access this route they will be redirected to the signup page
   app.get("/members", isAuthenticated, function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/index.html"));
+    res.sendFile(path.join(__dirname, "../public/html/chat.html"));
   });
 
   

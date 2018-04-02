@@ -40,8 +40,8 @@ input[type="text"], input[type="password"], input[type="email"] {
 }
 
 input[type="color"] {
-	height: 5em;
-	width: 10em;
+	height: 3em;
+	width: 6em;
 	border: none;
 	background-color: #000;
 }

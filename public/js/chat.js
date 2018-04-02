@@ -22,7 +22,7 @@ $(function () {
       url : "/logout",
       data : signoutData
     }).then(
-      window.location.replace("/login")
+      window.location.replace("/")
     );
   });
   //on send message button click
