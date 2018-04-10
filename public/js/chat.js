@@ -92,3 +92,4 @@ $.get("/api/user/" + localStorage.getItem("Cache-ual-Corner"), function (data) {
   $("#userName").text(data.userName);
   $("#userAvatar").attr("src", data.avatar_image);
 });
+

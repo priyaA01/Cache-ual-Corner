@@ -47,6 +47,15 @@ module.exports = function (app) {
     }
   });
 
+  // GET route for getting all of the updates
+  app.get("/api/update", function(req, res) {
+    // findAll returns all entries for a table when used with no options
+    db.User.findAll({}).then(function(dbTodo) {
+      // We have access to the updates as an argument inside of the callback function
+      res.json(dbTodo);
+    });
+  });
+  
   //get route for settings area for user to update, name, avatar, and skin
   app.put("/api/update/", function (req, res) {
     db.User.update({
@@ -73,8 +82,6 @@ module.exports = function (app) {
       res.json(getUpdate);
 
     });
-
-
   });
 
   //update login state
