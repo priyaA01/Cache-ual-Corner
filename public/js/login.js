@@ -56,6 +56,23 @@ $(document).ready(function() {
     data: loginData
   }).then(getUpdate);
   }
+
+  function updateLogState(email) 
+  {
+  //update logged state to true
+    var updatelog=
+    {
+      email:email
+    }
+
+  /// do the update for logged= true
+  $.ajax({
+    method : "PUT",
+    url : "/api/login",
+    data: updatelog
+  }).then(getUpdate);
+  }
+  
   //function login() addeds current user's email to local storage
   function login() 
   {//clear what is currently in local storage
