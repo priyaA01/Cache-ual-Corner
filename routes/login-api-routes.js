@@ -54,7 +54,7 @@ module.exports = function(app) {
     }
   });
 
-// GET route for getting all of the updates
+/*// GET route for getting all of the updates
   app.get("/api/update", function(req, res) {
     // findAll returns all entries for a table when used with no options
     db.User.findAll({}).then(function(dbTodo) {
@@ -62,7 +62,7 @@ module.exports = function(app) {
       res.json(dbTodo);
     });
   });
-
+*/
 //get route for settings area for user to update, name, avatar, and skin
 app.put("/api/update/", function (req, res) {
   db.User.update({
@@ -79,19 +79,7 @@ app.put("/api/update/", function (req, res) {
   });
 });
 
-
-//update logged off on the database by setting state to false
-app.get("/api/leave/", function(req, res) {
-    // findAll returns all entries for a table when used with no options
-    db.User.findAll({}).then(function(dbTodo) {
-      // We have access to the todos as an argument inside of the callback function
-      res.json(dbTodo);
-    });
-    res.redirect("/logout");
-  });
-
-//once logout update the logged state
-app.put("/logout", function (req, res) 
+app.put("/api/logout", function (req, res) 
 {
   db.User.update(
   { logged: false}, 
@@ -99,10 +87,11 @@ app.put("/logout", function (req, res)
     where: {  email: req.body.email}
   }).then(function (getUpdate) {
     res.json(getUpdate);
-  });
-});
 
-//end of logout area 
+  });
+
+
+});
 
 //update login state
 app.put("/api/login", function (req, res) 

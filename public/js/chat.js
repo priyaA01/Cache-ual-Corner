@@ -6,11 +6,8 @@ $(function () {
   //on LogOut button click
   $('#logout').on("click", function () {
     event.preventDefault();
-    socket.disconnect();
-
     var useremail = localStorage.getItem("Cache-ual-Corner");
-    localStorage.removeItem("Cache-ual-Corner");    
-
+    
     var signoutData =
     {
       email:useremail,
@@ -19,11 +16,13 @@ $(function () {
 
     $.ajax({
       method : "PUT",
-      url : "/logout",
+      url : "/api/logout",
       data : signoutData
-    }).then(
-      window.location.replace("/")
-    );
+    }).then(function(data) {
+      localStorage.removeItem("Cache-ual-Corner"); 
+      socket.disconnect();    
+      window.location.replace("/");
+    });
   });
   //on send message button click
   $('#chatInput').on("submit", function () {
