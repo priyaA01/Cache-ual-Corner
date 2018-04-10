@@ -8,15 +8,10 @@ $("form.update").on("submit", function(event)
 	event.preventDefault();
 
 	var updateData = {
-		userName: $("#userName").val().trim(), 
 		avatar_image:$("input:radio[name ='img']:checked").val(),
 		message_color: $("#updateColor").val(),
 		email: localStorage.getItem("Cache-ual-Corner"),
 		logged: true
-	}
-
-	if (updateData.userName === "") {
-		updateData.userName = "guest123";
 	}
 
 	updateUserInfo(updateData)

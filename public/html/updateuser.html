@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/stylesheets/reset.css" type="text/css" />
-    <link rel="stylesheet" href="/stylesheets/menuStyles.css" type="text/css" />
+    <link rel="stylesheet" href="/stylesheets/settings.css" type="text/css" />
     <title>Update your info</title>
     <link rel="shortcut icon" type="image/png" href="/assets/img/favicon.png"/>
   </head>
@@ -14,8 +14,8 @@
      <h2>Welcome <span class="member-name"></span></h2>
 
     <form class="update">
-      <input type="text" id="userName" placeholder="Your new username">
-
+      <h3>Change your Avatar</h3>
+      <br>
       <div id="radioList">
         <input type="radio" name="img" value="../img/avatar/avatar01.jpg" checked="checked"><img src="../img/avatar/avatar01.jpg" />
         <input type="radio" name="img" value="../img/avatar/avatar02.jpg"><img src="../img/avatar/avatar02.jpg" />
@@ -25,23 +25,20 @@
         <input type="radio" name="img" value="../img/avatar/avatar06.jpg"><img src="../img/avatar/avatar06.jpg" />
       </div>
 
-      <h2>Change your font color</h2>
+      <h3>Change your font color</h3>
       <input type="color" id="updateColor" value="#ff0000">
         <br>
       
-      <h2>What are you feeling like today? (Choose chat skin)</h2>
+      <h3>Change chat skin</h3><br>
       <select id="skinChoice">
         <option value="msdos">default (ms dos)</option>
         <option value="girly">Girl Boss</option>
         <option value="urban">Urban</option>
       </select>  
-        <br><br>
-
-      <button name="updateAcct" type="submit">Take me to Chat</button>
         <br>
-<!-- 
-      <a href="/"><h2>Never mind, I just want to chat</h2></a>
- -->
+
+      <button name="updateAcct" type="submit">Update Profile</button><br>
+    <a href="/chat"><h2>Never mind, I just want to chat</h2></a> 
     </form>
 
     <footer>
